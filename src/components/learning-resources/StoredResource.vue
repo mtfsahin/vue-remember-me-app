@@ -11,13 +11,13 @@
 </template>
 
 <script>
-import learningResource from "./LearningResource.vue";
+import LearningResource from "./LearningResource.vue";
 
 export default {
+  inject: ['resources'],
   components: {
-    learningResource,
+    LearningResource,
   },
-  props: ["resources"],
 };
 </script>
 
