@@ -1,4 +1,5 @@
 <template>
+  <teleport to="body">
     <div @click="$emit('close')"></div>
     <dialog open>
       <header>
@@ -15,18 +16,19 @@
         </slot>
       </menu>
     </dialog>
-  </template>
+  </teleport>
+</template>
 
 <script>
 export default {
-    props: {
-        title: {
-            type: String,
-            required: false
-        }
+  props: {
+    title: {
+      type: String,
+      required: false,
     },
-    emits: ['close']
-}
+  },
+  emits: ["close"],
+};
 </script>
 
 <style scoped>
